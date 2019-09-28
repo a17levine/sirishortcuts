@@ -16,7 +16,7 @@ class TeslaController < ApplicationController
       render json: { status: 'hvac started' }
     rescue => e
       client.chat_postMessage(channel: '#alex-scripting-log', text: "Tesla HVAC script failed: #{e.inspect} #{e.backtrace.join("\n")}", as_user: true)
-      render json: { status: 'hvac scriped failed' }
+      render json: { status: 'hvac script failed' }
     end
   end
 
@@ -37,7 +37,7 @@ class TeslaController < ApplicationController
       render json: { status: 'hvac stopped' }
     rescue => e
       client.chat_postMessage(channel: '#alex-scripting-log', text: "Tesla HVAC script failed: #{e.inspect} #{e.backtrace.join("\n")}", as_user: true)
-      render json: { status: 'hvac scriped failed' }
+      render json: { status: 'hvac script failed' }
     end
   end
 end
