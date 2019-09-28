@@ -1,5 +1,6 @@
 Jets.application.routes.draw do
   get 'tesla/start_hvac'
+  get 'tesla/stop_hvac'
   root "jets/public#show"
 
   # The jets/public#show controller can serve static utf8 content out of the public folder.
