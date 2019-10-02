@@ -10,8 +10,8 @@ class TeslaController < ApplicationController
       tesla_api.login!(ENV["tesla_password"])
       model_3 = tesla_api.vehicles.first
       model_3.wake_up
-
-      10.times {
+      
+      15.times {
         puts "model3 state is #{model_3['state']}"
         if model_3['state'] == 'online'
           puts "turning on car"
@@ -20,7 +20,9 @@ class TeslaController < ApplicationController
           render json: { status: 'hvac started' } and return
         else
           puts "sleeping"
-          sleep 3
+          sleep 2
+          # Refresh the vehicle state
+          model_3 = tesla_api.vehicles.first
         end
       }
       # If we're not in this loop, the car didn't wake up after several attempts
