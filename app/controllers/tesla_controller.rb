@@ -20,7 +20,7 @@ class TeslaController < ApplicationController
           render json: { status: 'hvac started' } and return
         else
           puts "sleeping"
-          sleep 1
+          sleep 3
         end
       }
       # If we're not in this loop, the car didn't wake up after several attempts
