@@ -1,4 +1,6 @@
 class TeslaController < ApplicationController
+  
+  timeout 30
   def start_hvac
     client = Slack::Web::Client.new
     begin
