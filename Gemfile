@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
+ruby '2.5.6'
+
 gem "jets"
 
 # Include webpacker if you are you are building html pages
