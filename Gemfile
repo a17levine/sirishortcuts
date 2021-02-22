@@ -7,6 +7,10 @@ gem "jets"
 # Include webpacker if you are you are building html pages
 gem "webpacker", git: "https://github.com/tongueroo/webpacker.git", branch: "jets"
 
+# Solves an environment issue
+# https://github.com/guard/guard-rspec/issues/395#issuecomment-285240552
+gem 'json'
+
 gem "dynomite"
 gem 'tesla_api'
 gem 'slack-ruby-client'
